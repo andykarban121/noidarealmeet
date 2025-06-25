@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noida Real Meet 💋</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
@@ -12,40 +12,33 @@
       background: #0d0d0d;
       color: #fff;
     }
-
     header {
       text-align: center;
       padding: 20px;
       background: linear-gradient(45deg, #ff007f, #ff4da6);
     }
-
     header h1 {
       font-size: 28px;
       margin: 0;
       color: #fff;
     }
-
     header p {
       font-size: 16px;
       margin-top: 8px;
       color: #fff8;
     }
-
     .card {
       background: #1a1a1a;
       margin: 16px;
       border-radius: 16px;
       padding: 16px;
       box-shadow: 0 0 10px #ff4da666;
-      position: relative;
     }
-
     h2 {
       margin-bottom: 10px;
       font-size: 20px;
       color: #ff66a3;
     }
-
     .swiper {
       width: 100%;
       height: auto;
@@ -54,14 +47,12 @@
       margin-bottom: 12px;
       position: relative;
     }
-
     .swiper-slide img {
       width: 100%;
       aspect-ratio: 9 / 16;
       object-fit: cover;
       border-radius: 12px;
     }
-
     .swiper-pagination {
       position: absolute;
       bottom: 8px;
@@ -69,17 +60,14 @@
       text-align: center;
       z-index: 10;
     }
-
     .swiper-pagination-bullet {
       background: white;
       opacity: 0.6;
     }
-
     .swiper-pagination-bullet-active {
       background: #ff4da6;
       opacity: 1;
     }
-
     .btn {
       display: inline-block;
       background: #ff007f;
@@ -91,24 +79,20 @@
       font-size: 16px;
       box-shadow: 0 0 10px #ff4da6;
       transition: 0.3s ease;
-      flex: 1;
+      cursor: pointer;
       text-align: center;
     }
-
     .btn:hover {
       background: #e6006b;
     }
-
     .btn-row {
       display: flex;
+      justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
       margin-top: 16px;
-      align-items: flex-end;
     }
-
-    .booking-select {
-      flex: 1;
+    .booking-select, .location-input {
       padding: 12px 16px;
       border-radius: 30px;
       background: #2a2a2a;
@@ -116,36 +100,43 @@
       border: none;
       font-weight: bold;
       font-size: 16px;
-      appearance: none;
-      background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-      background-repeat: no-repeat;
-      background-position: right 16px center;
-      background-size: 16px;
-      cursor: pointer;
+      margin-bottom: 10px;
       width: 100%;
+      box-sizing: border-box;
     }
-
     .selected-label {
       margin-bottom: 8px;
       color: #ff66a3;
       font-weight: bold;
       font-size: 14px;
     }
-
     .price-list {
       margin-top: 10px;
     }
-
     .price-list li {
       margin: 4px 0;
     }
-
     footer {
       text-align: center;
       padding: 20px;
       font-size: 14px;
       background: #111;
       color: #bbb;
+    }
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 12px;
+      background: #222;
+      color: #fff;
+      font-size: 15px;
+      border: none;
+      resize: none;
+    }
+    .copy-btn {
+      margin-top: 10px;
+      width: 100%;
     }
   </style>
 </head>
@@ -156,7 +147,7 @@
   </header>
 
   <div class="card">
-    <h2>📢 Important Info</h2>
+    <h2>🔔 Important Info</h2>
     <p>✅ <strong>No Advance</strong> liya jayega bilkul starting mein.</p>
     <p>✅ Yeh ek <strong>Genuine Meet</strong> hai – sab ladkiyaan real hain, fake profiles nahi.</p>
     <p>✅ Staff badhne ke sath <strong>options aur prices kam</strong> kiye jayenge.</p>
@@ -165,43 +156,46 @@
     <p>🏨 <strong>Type of Meet:</strong> Hotel Meet Only – 1-on-1 trusted client meet system.</p>
   </div>
 
-  <div class="card">
+  <!-- Girl Card Template -->
+  <div class="card girl-card" data-girl="Trisha">
     <h2>👠 Call Girl: Trisha</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://thumbsnap.com/i/qSimVoaQ.jpg" alt="Trisha 1"></div>
-        <div class="swiper-slide"><img src="https://thumbsnap.com/i/oPzp2asF.jpg" alt="Trisha 2"></div>
+        <div class="swiper-slide"><img src="https://thumbsnap.com/i/qSimVoaQ.jpg"></div>
+        <div class="swiper-slide"><img src="https://thumbsnap.com/i/oPzp2asF.jpg"></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
 
-    <p>🕒 <strong>Full Day:</strong> 12 PM – 6 PM – <span style="color:#66ff66;">Book Now</span><br>
+    <p><strong>🕒 Full Day:</strong> 12 PM – 6 PM – <span style="color:#66ff66;">Book Now</span><br>
     🌙 <strong>Full Night:</strong> 11 PM – 6 AM – <span style="color:#ff6666;">Booked</span></p>
 
-    <p><strong>💸 Price:</strong></p>
     <ul class="price-list">
       <li>Full Day: ₹10,000</li>
       <li>Full Night: ₹10,000</li>
       <li>2 Shot: ₹4,000</li>
     </ul>
 
+    <p class="selected-label">Selected: <span class="selected-type">Full Day</span></p>
+    <select class="booking-select" onchange="updateCard(this)">
+      <option value="2 Shot">2 Shot</option>
+      <option value="Full Day" selected>Full Day</option>
+      <option value="Full Night">Full Night</option>
+    </select>
+
+    <input type="text" class="location-input" placeholder="Enter your location" oninput="updateCard(this)" />
+
+    <p><strong>Copy this message:</strong></p>
+    <textarea class="message-box" readonly></textarea>
+    <button class="btn copy-btn" onclick="copyText(this)">📋 Copy Message</button>
+
+    <p><strong>Then click below to DM us:</strong></p>
     <div class="btn-row">
-      <div style="flex: 1;">
-        <div class="selected-label" id="trisha-selected">Selected: Full Day</div>
-        <select class="booking-select" onchange="
-          var type = this.value;
-          var msg = encodeURIComponent('Hi, I want to book Trisha for ' + type);
-          document.getElementById('trisha-link').href = 'https://ig.me/m/noidarealmeet?text=' + msg;
-          document.getElementById('trisha-selected').innerText = 'Selected: ' + type;
-        ">
-          <option value="2 Shot">2 Shot</option>
-          <option value="Full Day" selected>Full Day</option>
-          <option value="Full Night">Full Night</option>
-        </select>
-      </div>
-      <a id="trisha-link" class="btn book-now-btn" target="_blank" href="https://ig.me/m/noidarealmeet?text=Hi%2C%20I%20want%20to%20book%20Trisha%20for%20Full%20Day">📬 Book Now</a>
+      <a class="btn ig-btn" target="_blank">📬 Book on IG</a>
     </div>
   </div>
+
+  
 
   <footer>
     © 2025 Noida Real Meet | Genuine Call Girls | Insta DM Booking 📬
@@ -211,11 +205,31 @@
   <script>
     new Swiper('.mySwiper', {
       loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
+      pagination: { el: '.swiper-pagination', clickable: true },
     });
+
+    function updateCard(el) {
+      const card = el.closest('.girl-card');
+      const type = card.querySelector('.booking-select').value;
+      const location = card.querySelector('.location-input').value.trim();
+      const name = card.dataset.girl;
+      const label = card.querySelector('.selected-type');
+      const message = `Hi, I want to book ${name} for ${type}${location ? ' at ' + location : ''}`;
+
+      label.textContent = type;
+      card.querySelector('.message-box').value = message;
+      card.querySelector('.ig-btn').href = `https://ig.me/m/noidarealmeet?text=${encodeURIComponent(message)}`;
+    }
+
+    function copyText(btn) {
+      const msg = btn.closest('.girl-card').querySelector('.message-box').value;
+      navigator.clipboard.writeText(msg).then(() => {
+        btn.textContent = '✅ Copied!';
+        setTimeout(() => btn.textContent = '📋 Copy Message', 1500);
+      });
+    }
+
+    document.querySelectorAll('.girl-card').forEach(updateCard);
   </script>
 </body>
 </html>
