@@ -204,35 +204,44 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    new Swiper('.mySwiper', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-    });
-  
-    document.querySelectorAll('.card').forEach(card => {
-      const bookingType = card.querySelector('.booking-select');
-      const bookNowBtn = card.querySelector('.book-now-btn');
-      const selectedLabel = card.querySelector('.selected-label');
-  
-      if (bookingType && bookNowBtn && selectedLabel) {
-        function updateBookingLink() {
-          const girlName = card.querySelector('h2')?.textContent?.split(':')[1]?.trim() || 'Unknown';
-          const selectedType = bookingType.value;
-          selectedLabel.textContent = `Selected: ${selectedType}`;
-          const plainMessage = `Hi, I want to book ${girlName} for ${selectedType}`;
-          const encodedMessage = encodeURIComponent(plainMessage);
-          const dmLink = `https://ig.me/m/noidarealmeet?text=${encodedMessage}`;
-          bookNowBtn.href = dmLink;
-        }
-  
-        bookingType.addEventListener('change', updateBookingLink);
-        updateBookingLink();
+  new Swiper('.mySwiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+  });
+
+  document.querySelectorAll('.card').forEach(card => {
+    const bookingType = card.querySelector('.booking-select');
+    const bookNowBtn = card.querySelector('.book-now-btn');
+    const selectedLabel = card.querySelector('.selected-label');
+
+    if (bookingType && bookNowBtn && selectedLabel) {
+      function updateBookingLink() {
+        // Girl name from heading
+        const h2Text = card.querySelector('h2')?.textContent || '';
+        const girlName = h2Text.split(':')[1]?.trim() || 'Unknown';
+
+        // Selected booking type
+        const selectedType = bookingType.value;
+        selectedLabel.textContent = `Selected: ${selectedType}`;
+
+        // Message to send in Instagram DM
+        const message = `Hi, I want to book ${girlName} for ${selectedType}`;
+        const encodedMessage = encodeURIComponent(message);
+
+        // Final link
+        const dmLink = `https://ig.me/m/noidarealmeet?text=${encodedMessage}`;
+        bookNowBtn.href = dmLink;
       }
-    });
-  </script>
+
+      bookingType.addEventListener('change', updateBookingLink);
+      updateBookingLink(); // Initialize on load
+    }
+  });
+</script>
+
   
 </body>
 </html>
