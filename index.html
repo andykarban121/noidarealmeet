@@ -219,28 +219,35 @@
 
     if (bookingType && bookNowBtn && selectedLabel) {
       function updateBookingLink() {
-        // Girl name from heading
-        const h2Text = card.querySelector('h2')?.textContent || '';
-        const girlName = h2Text.split(':')[1]?.trim() || 'Unknown';
+        // Get girl name from card title (👠 Call Girl: Trisha)
+        const h2 = card.querySelector('h2');
+        let girlName = 'Unknown';
+        if (h2 && h2.textContent.includes(':')) {
+          girlName = h2.textContent.split(':')[1].trim();
+        }
 
-        // Selected booking type
+        // Get selected booking option
         const selectedType = bookingType.value;
+
+        // Update selected label text
         selectedLabel.textContent = `Selected: ${selectedType}`;
 
-        // Message to send in Instagram DM
+        // Compose Instagram DM message
         const message = `Hi, I want to book ${girlName} for ${selectedType}`;
         const encodedMessage = encodeURIComponent(message);
-
-        // Final link
         const dmLink = `https://ig.me/m/noidarealmeet?text=${encodedMessage}`;
-        bookNowBtn.href = dmLink;
+
+        // Set final href
+        bookNowBtn.setAttribute('href', dmLink);
       }
 
+      // Update on page load + dropdown change
       bookingType.addEventListener('change', updateBookingLink);
-      updateBookingLink(); // Initialize on load
+      updateBookingLink();
     }
   });
 </script>
+
 
   
 </body>
