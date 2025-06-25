@@ -211,27 +211,28 @@
         clickable: true
       },
     });
-
+  
     document.querySelectorAll('.card').forEach(card => {
       const bookingType = card.querySelector('.booking-select');
       const bookNowBtn = card.querySelector('.book-now-btn');
       const selectedLabel = card.querySelector('.selected-label');
-
+  
       if (bookingType && bookNowBtn && selectedLabel) {
         function updateBookingLink() {
           const girlName = card.querySelector('h2')?.textContent?.split(':')[1]?.trim() || 'Unknown';
           const selectedType = bookingType.value;
           selectedLabel.textContent = `Selected: ${selectedType}`;
-          const message = `Hi, I want to book ${girlName} for ${selectedType} 👠`;
-          const encodedMessage = encodeURIComponent(message);
+          const plainMessage = `Hi, I want to book ${girlName} for ${selectedType}`;
+          const encodedMessage = encodeURIComponent(plainMessage);
           const dmLink = `https://ig.me/m/noidarealmeet?text=${encodedMessage}`;
           bookNowBtn.href = dmLink;
         }
-
+  
         bookingType.addEventListener('change', updateBookingLink);
         updateBookingLink();
       }
     });
   </script>
+  
 </body>
 </html>
