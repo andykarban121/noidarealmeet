@@ -50,6 +50,7 @@
       height: 300px;
       border-radius: 12px;
       overflow: hidden;
+      margin-bottom: 12px;
     }
 
     .swiper-slide img {
@@ -61,7 +62,6 @@
 
     .btn {
       display: inline-block;
-      margin-top: 14px;
       background: #ff007f;
       color: white;
       padding: 12px 20px;
@@ -71,15 +71,65 @@
       font-size: 16px;
       box-shadow: 0 0 10px #ff4da6;
       transition: 0.3s ease;
+      flex: 1;
+      text-align: center;
     }
 
     .btn:hover {
       background: #e6006b;
     }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      align-items: flex-end;
+    }
+
+    .booking-select {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 30px;
+      background: #2a2a2a;
+      color: white;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .selected-label {
+      margin-bottom: 8px;
+      color: #ff66a3;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .price-list {
+      margin-top: 10px;
+    }
+
+    .price-list li {
+      margin: 4px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: #111;
+      color: #bbb;
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>💋 Noida Real Meet 💋</h1>
     <p>🔥 Book your Dream Call Girl Now – Real Pics, Real Pleasure 🔥</p>
@@ -89,77 +139,81 @@
     <p>✅ <strong>No Advance</strong> liya jayega bilkul starting mein.</p>
     <p>✅ Yeh ek <strong>Genuine Meet</strong> hai – sab ladkiyaan real hain, fake profiles nahi.</p>
     <p>✅ Staff badhne ke sath <strong>options aur prices kam</strong> kiye jayenge.</p>
-    <p>💸 <strong>Price:</strong> ₹10,000 for full day (6 hours) , full night (6-7 hours)
-    </p>
+    <p>💸 <strong>Price:</strong> ₹10,000 for full day (6 hours), full night (6-7 hours)</p>
     <p>🚖 <strong>Cab Info:</strong> One-side cab aapki taraf se hoga, dusra side ladki khud manage karegi.</p>
     <p>🏨 <strong>Type of Meet:</strong> Hotel Meet Only – 1-on-1 trusted client meet system.</p>
   </div>
 
   <div class="card">
-    <h2>👠 Call Girl 1: Ayesha</h2>
+    <h2>👠 Call Girl: Ayesha</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+1" alt="Ayesha 1"></div>
         <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+2" alt="Ayesha 2"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+3" alt="Ayesha 3"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+4" alt="Ayesha 4"></div>
       </div>
     </div>
-    <a class="btn" href="https://www.instagram.com/direct/t/Noidarealmeet?text=Hi%2C%20I%20want%20to%20book%20Ayesha%20%F0%9F%91%A0" target="_blank">💌 Book Now (Ayesha)</a>
+
+    <p>🕒 <strong>Full Day:</strong> 12 PM – 6 PM – <span style="color:#ff6666;">Booked</span><br>
+    🌙 <strong>Full Night:</strong> 11 PM – 6 AM – <span style="color:#66ff66;">Book Now</span></p>
+
+    <p><strong>💸 Price:</strong></p>
+    <ul class="price-list">
+      <li>Full Day: ₹10,000</li>
+      <li>Full Night: ₹10,000</li>
+      <li>2 Shot: ₹4,000</li>
+    </ul>
+
+    <div class="btn-row">
+      <div style="flex: 1;">
+        <div class="selected-label">Selected: Full Day</div>
+        <select class="booking-select">
+          <option value="2 Shot">2 Shot</option>
+          <option value="Full Day" selected>Full Day</option>
+          <option value="Full Night">Full Night</option>
+        </select>
+      </div>
+      <a class="btn book-now-btn" target="_blank">📬 Book Now</a>
+    </div>
   </div>
   <div class="card">
-    <h2>👠 Call Girl 2: Sweety</h2>
+    <h2>👠 Call Girl: Trisha</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+1" alt="Ayesha 1"></div>
         <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+2" alt="Ayesha 2"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+3" alt="Ayesha 3"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+4" alt="Ayesha 4"></div>
       </div>
     </div>
-    <a class="btn" href="https://www.instagram.com/direct/t/Noidarealmeet?text=Hi%2C%20I%20want%20to%20book%20Ayesha%20%F0%9F%91%A0" target="_blank">💌 Book Now (Sweety)</a>
-  </div>
-  <div class="card">
-    <h2>👠 Call Girl 3: Trisha</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+1" alt="Ayesha 1"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+2" alt="Ayesha 2"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+3" alt="Ayesha 3"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+4" alt="Ayesha 4"></div>
+
+    <p>🕒 <strong>Full Day:</strong> 12 PM – 6 PM – <span style="color:#ff6666;">Booked</span><br>
+    🌙 <strong>Full Night:</strong> 11 PM – 6 AM – <span style="color:#66ff66;">Book Now</span></p>
+
+    <p><strong>💸 Price:</strong></p>
+    <ul class="price-list">
+      <li>Full Day: ₹10,000</li>
+      <li>Full Night: ₹10,000</li>
+      <li>2 Shot: ₹4,000</li>
+    </ul>
+
+    <div class="btn-row">
+      <div style="flex: 1;">
+        <div class="selected-label">Selected: Full Day</div>
+        <select class="booking-select">
+          <option value="2 Shot">2 Shot</option>
+          <option value="Full Day" selected>Full Day</option>
+          <option value="Full Night">Full Night</option>
+        </select>
       </div>
+      <a class="btn book-now-btn" target="_blank">📬 Book Now</a>
     </div>
-    <a class="btn" href="https://www.instagram.com/direct/t/Noidarealmeet?text=Hi%2C%20I%20want%20to%20book%20Ayesha%20%F0%9F%91%A0" target="_blank">💌 Book Now (Trisha)</a>
   </div>
-  <div class="card">
-    <h2>👠 Call Girl 4: Aditi</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+1" alt="Ayesha 1"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+2" alt="Ayesha 2"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+3" alt="Ayesha 3"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+4" alt="Ayesha 4"></div>
-      </div>
-    </div>
-    <a class="btn" href="https://www.instagram.com/direct/t/Noidarealmeet?text=Hi%2C%20I%20want%20to%20book%20Ayesha%20%F0%9F%91%A0" target="_blank">💌 Book Now (Aditi)</a>
-  </div>
-  <div class="card">
-    <h2>👠 Call Girl 5: Priya</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+1" alt="Ayesha 1"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+2" alt="Ayesha 2"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+3" alt="Ayesha 3"></div>
-        <div class="swiper-slide"><img src="https://via.placeholder.com/400x300?text=Ayesha+4" alt="Ayesha 4"></div>
-      </div>
-    </div>
-    <a class="btn" href="https://www.instagram.com/direct/t/Noidarealmeet?text=Hi%2C%20I%20want%20to%20book%20Ayesha%20%F0%9F%91%A0" target="_blank">💌 Book Now (Priya)</a>
-  </div>
-  <footer style="text-align:center; padding:20px; font-size:14px; background:#111; color:#bbb;">
-    © 2025 Noida Real Meet | Genuine Call Girls | Insta DM Booking 💌  
+
+
+  <!-- You can copy the above card and change only the name + image URLs to add more girls -->
+
+  <footer>
+    © 2025 Noida Real Meet | Genuine Call Girls | Insta DM Booking 📬
   </footer>
 
-  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     new Swiper('.mySwiper', {
@@ -168,7 +222,27 @@
         el: '.swiper-pagination',
       },
     });
-  </script>
 
+    document.querySelectorAll('.card').forEach(card => {
+      const bookingType = card.querySelector('.booking-select');
+      const bookNowBtn = card.querySelector('.book-now-btn');
+      const selectedLabel = card.querySelector('.selected-label');
+
+      if (bookingType && bookNowBtn && selectedLabel) {
+        function updateBookingLink() {
+          const girlName = card.querySelector('h2')?.textContent?.split(':')[1]?.trim() || 'Unknown';
+          const selectedType = bookingType.value;
+          selectedLabel.textContent = `Selected: ${selectedType}`;
+          const message = `Hi, I want to book ${girlName} for ${selectedType} 👠`;
+          const encodedMessage = encodeURIComponent(message);
+          const dmLink = `https://www.instagram.com/direct/t/Noidarealmeet?text=${encodedMessage}`;
+          bookNowBtn.href = dmLink;
+        }
+
+        bookingType.addEventListener('change', updateBookingLink);
+        updateBookingLink();
+      }
+    });
+  </script>
 </body>
 </html>
