@@ -187,14 +187,19 @@
 
     <div class="btn-row">
       <div style="flex: 1;">
-        <div class="selected-label">Selected: Full Day</div>
-        <select class="booking-select">
+        <div class="selected-label" id="trisha-selected">Selected: Full Day</div>
+        <select class="booking-select" onchange="
+          var type = this.value;
+          var msg = encodeURIComponent('Hi, I want to book Trisha for ' + type);
+          document.getElementById('trisha-link').href = 'https://ig.me/m/noidarealmeet?text=' + msg;
+          document.getElementById('trisha-selected').innerText = 'Selected: ' + type;
+        ">
           <option value="2 Shot">2 Shot</option>
           <option value="Full Day" selected>Full Day</option>
           <option value="Full Night">Full Night</option>
         </select>
       </div>
-      <a class="btn book-now-btn" target="_blank">📬 Book Now</a>
+      <a id="trisha-link" class="btn book-now-btn" target="_blank" href="https://ig.me/m/noidarealmeet?text=Hi%2C%20I%20want%20to%20book%20Trisha%20for%20Full%20Day">📬 Book Now</a>
     </div>
   </div>
 
@@ -204,51 +209,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-  new Swiper('.mySwiper', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-  });
-
-  document.querySelectorAll('.card').forEach(card => {
-    const bookingType = card.querySelector('.booking-select');
-    const bookNowBtn = card.querySelector('.book-now-btn');
-    const selectedLabel = card.querySelector('.selected-label');
-
-    if (bookingType && bookNowBtn && selectedLabel) {
-      function updateBookingLink() {
-        // Get girl name from card title (👠 Call Girl: Trisha)
-        const h2 = card.querySelector('h2');
-        let girlName = 'Unknown';
-        if (h2 && h2.textContent.includes(':')) {
-          girlName = h2.textContent.split(':')[1].trim();
-        }
-
-        // Get selected booking option
-        const selectedType = bookingType.value;
-
-        // Update selected label text
-        selectedLabel.textContent = `Selected: ${selectedType}`;
-
-        // Compose Instagram DM message
-        const message = `Hi, I want to book ${girlName} for ${selectedType}`;
-        const encodedMessage = encodeURIComponent(message);
-        const dmLink = `https://ig.me/m/noidarealmeet?text=${encodedMessage}`;
-
-        // Set final href
-        bookNowBtn.setAttribute('href', dmLink);
-      }
-
-      // Update on page load + dropdown change
-      bookingType.addEventListener('change', updateBookingLink);
-      updateBookingLink();
-    }
-  });
-</script>
-
-
-  
+    new Swiper('.mySwiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+    });
+  </script>
 </body>
 </html>
